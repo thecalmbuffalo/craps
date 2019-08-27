@@ -1,16 +1,8 @@
 <?php
-$name = $email = "";
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  $name = test_input($_POST["name"]);
-  $email = test_input($_POST["email"]);
+$array = filter_input_array(INPUT_POST);
+$newArray = array();
+foreach (array_keys($array) as $fieldKey {
+  foreach ($array[$fieldKey] as $key=>$value) {
+    $newArray[$key][$fieldKey] = $value;
+  }
 }
-
-function test_input($data) {
-  $data = trim($data);
-  $data = stripslashes($data);
-  $data = htmlspecialchars($data);
-  return $data;
-{
-//
-?>
