@@ -6,3 +6,4 @@ foreach (array_keys($array) as $fieldKey {
     $newArray[$key][$fieldKey] = $value;
   }
 }
+?>
